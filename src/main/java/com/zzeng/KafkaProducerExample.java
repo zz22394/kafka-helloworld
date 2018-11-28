@@ -47,7 +47,7 @@ public class KafkaProducerExample {
 
     private static Producer<String, String> createProducer() {
         Properties kafkaProps = new Properties();
-        kafkaProps.put("bootstrap.servers", "zzeng-hdp-1.field.hortonworks.com:6667");
+        kafkaProps.put("bootstrap.servers", "zzeng-hdp-1.field.hortonworks.com:6667,zzeng-hdp-2.field.hortonworks.com:6667,zzeng-hdp-3.field.hortonworks.com:6667");
         kafkaProps.put("key.serializer", "org.apache.kafka.common.serialization.StringSerializer");
         kafkaProps.put("value.serializer", "org.apache.kafka.common.serialization.StringSerializer");
         return new KafkaProducer<String, String>(kafkaProps);
